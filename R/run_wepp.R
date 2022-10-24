@@ -14,7 +14,7 @@
 #' }
 #' @export
 #'
-run_wepp <- function(file) {
+run_wepp <- function(file, copy_to_working = FALSE) {
 
     #check for correct file extension and Operating system
     stopifnot("Please pass a file with correct extension" =
@@ -39,7 +39,10 @@ run_wepp <- function(file) {
     #runs the binary files using the input files and
     #copies the output files to the original directory
     system(paste(command = 'wepp<',file,' > screen.txt'), wait = TRUE)
-    file.copy(c(output_files,"screen.txt"), current.folder)
+
+    if (copy_to_working) {
+        file.copy(c(output_files,"screen.txt"), current.folder)
+    }
     #set the original directory as working directory
     setwd(current.folder)
     files <- c(output_files, input_files)
