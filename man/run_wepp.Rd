@@ -4,7 +4,7 @@
 \alias{run_wepp}
 \title{Runs the WEPP model}
 \usage{
-run_wepp(file)
+run_wepp(file, copy_to_working = FALSE)
 }
 \arguments{
 \item{file}{A path to the file.}

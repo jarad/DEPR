@@ -4,7 +4,7 @@
 \alias{read_env}
 \title{Read a WEPP environment file}
 \usage{
-read_env(file, start.year = 2006)
+read_env(file, start.year)
 }
 \arguments{
 \item{file}{A path to the file.}

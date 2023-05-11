@@ -24,7 +24,7 @@
 #' }
 #' @export
 #'
-read_env <- function(file, start.year=2006) {
+read_env <- function(file, start.year) {
     headers = read.table(file, skip = 1, header = F, nrows = 1, as.is = TRUE)
 
     units = read.table(file, skip = 1, header = TRUE, nrows = 1, as.is = TRUE)
